@@ -32,5 +32,10 @@
     android:layout_height="wrap_content"
     android:text="register"
     android:id="@+id/regi"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="next app"
+        android:id="@+id/next"/>
 
 </LinearLayout>
