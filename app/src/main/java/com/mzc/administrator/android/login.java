@@ -1,5 +1,6 @@
 package com.mzc.administrator.android;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.Toast;
 
 public class login extends AppCompatActivity {
     EditText ed,ed1;
-    Button b;
+    Button b,r;
     String Uname,pass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class login extends AppCompatActivity {
         ed=(EditText)findViewById(R.id.user);
         ed1=(EditText)findViewById(R.id.pass);
         b=(Button)findViewById(R.id.login);
+        r=(Button)findViewById(R.id.regi);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -26,6 +28,14 @@ public class login extends AppCompatActivity {
                 pass=ed1.getText().toString();
                 Toast.makeText(getApplicationContext(),Uname,Toast.LENGTH_LONG).show();
                 Toast.makeText(getApplicationContext(),pass,Toast.LENGTH_LONG).show();
+            }
+        });
+        r.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent t=new Intent(getApplicationContext(),Register.class);
+                startActivity(t);
+
             }
         });
     }
